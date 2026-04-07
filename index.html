@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cornerstone Interlock & Landscape Design — Vaughan's Premier Craftsmen</title>
+<meta name="description" content="Family-owned interlock, flagstone, and landscape design in Vaughan. Premium driveways, patios, and backyards built by Justin and Marisa. 4.5 stars on Google." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --stone-50: #f6f4ef;
+    --stone-100: #eae5da;
+    --stone-200: #d4ccba;
+    --stone-400: #8a7f6a;
+    --stone-600: #4a4437;
+    --stone-800: #2a2620;
+    --stone-900: #1a1814;
+    --ink: #0f0e0b;
+    --accent: #b8944a;
+    --accent-deep: #8a6b2e;
+    --line: rgba(26, 24, 20, 0.12);
+    --shadow-sm: 0 1px 2px rgba(15, 14, 11, 0.06);
+    --shadow-md: 0 12px 40px rgba(15, 14, 11, 0.12);
+    --shadow-lg: 0 30px 80px rgba(15, 14, 11, 0.22);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--stone-50);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .serif { font-family: 'Cormorant Garamond', serif; }
+
+  /* ========== NAV ========== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(246, 244, 239, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    background: var(--ink);
+    position: relative;
+    transform: rotate(45deg);
+  }
+  .logo-mark::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background: var(--accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+  }
+  .nav-links a {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--accent-deep); }
+
+  .nav-cta {
+    background: var(--ink);
+    color: var(--stone-50);
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  .nav-cta:hover { background: var(--accent-deep); }
+
+  /* ========== HERO ========== */
+  .hero {
+    min-height: 100vh;
+    padding: 140px 48px 80px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(184, 148, 74, 0.08), transparent 60%);
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--stone-600);
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 0.95;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent-deep);
+    font-weight: 400;
+  }
+
+  .hero p.lede {
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--stone-600);
+    max-width: 520px;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--ink);
+    color: var(--stone-50);
+    padding: 18px 36px;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-primary:hover {
+    background: var(--accent-deep);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .btn-primary::after {
+    content: '→';
+    transition: transform 0.3s;
+  }
+  .btn-primary:hover::after { transform: translateX(4px); }
+
+  .btn-secondary {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 4px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .btn-secondary:hover {
+    color: var(--accent-deep);
+    border-color: var(--accent-deep);
+  }
+
+  .hero-image {
+    position: relative;
+    height: 640px;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-image::after {
+    content: '';
+    position: absolute;
+    inset: 20px -20px -20px 20px;
+    border: 1px solid var(--stone-400);
+    z-index: -1;
+  }
+
+  .hero-rating {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    background: var(--stone-50);
+    padding: 24px 32px;
+    box-shadow: var(--shadow-lg);
+    border-left: 3px solid var(--accent);
+  }
+  .hero-rating .stars {
+    color: var(--accent);
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .hero-rating .rating-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .hero-rating .rating-sub {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--stone-600);
+    margin-top: 2px;
+  }
+
+  /* ========== MARQUEE ========== */
+  .marquee {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0;
+    overflow: hidden;
+    background: var(--stone-100);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 80px;
+    animation: scroll 40s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .marquee-item {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--stone-600);
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+  .marquee-item::after {
+    content: '◆';
+    color: var(--accent);
+    font-size: 10px;
+    font-style: normal;
+  }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ========== SERVICES ========== */
+  .services {
+    padding: 140px 48px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    margin-bottom: 100px;
+  }
+
+  .section-eyebrow {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--stone-600);
+    font-weight: 500;
+    padding-top: 12px;
+    border-top: 1px solid var(--ink);
+    display: inline-block;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--accent-deep);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .service {
+    background: var(--stone-50);
+    padding: 56px 48px;
+    position: relative;
+    transition: background 0.4s;
+  }
+  .service:hover { background: var(--stone-100); }
+
+  .service-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--accent-deep);
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .service h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .service p {
+    color: var(--stone-600);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 440px;
+  }
+
+  /* ========== PORTFOLIO ========== */
+  .portfolio {
+    padding: 140px 48px;
+    background: var(--stone-100);
+  }
+
+  .portfolio-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 180px;
+    gap: 20px;
+    margin-top: 80px;
+  }
+
+  .portfolio-item {
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+  }
+  .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .portfolio-item:hover img { transform: scale(1.06); }
+
+  .portfolio-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 14, 11, 0.6), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .portfolio-item:hover::after { opacity: 1; }
+
+  .portfolio-caption {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    color: var(--stone-50);
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s;
+  }
+  .portfolio-item:hover .portfolio-caption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .portfolio-caption .caption-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .portfolio-caption .caption-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .item-1 { grid-column: span 7; grid-row: span 2; }
+  .item-2 { grid-column: span 5; grid-row: span 2; }
+  .item-3 { grid-column: span 4; grid-row: span 2; }
+  .item-4 { grid-column: span 4; grid-row: span 2; }
+  .item-5 { grid-column: span 4; grid-row: span 2; }
+
+  /* ========== STORY ========== */
+  .story {
+    padding: 140px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .story-visual {
+    position: relative;
+    aspect-ratio: 3/4;
+    background: var(--stone-200);
+    overflow: hidden;
+  }
+  .story-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .story-visual::before {
+    content: '';
+    position: absolute;
+    inset: -20px -20px 20px 20px;
+    border: 1px solid var(--accent);
+    z-index: -1;
+  }
+
+  .story-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+  }
+  .story-content h2 em {
+    font-style: italic;
+    color: var(--accent-deep);
+  }
+
+  .story-content p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--stone-600);
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+
+  .signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    margin-top: 40px;
+    color: var(--ink);
+  }
+  .signature-sub {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--stone-600);
+    margin-top: 4px;
+  }
+
+  /* ========== TESTIMONIALS ========== */
+  .testimonials {
+    padding: 140px 48px;
+    background: var(--ink);
+    color: var(--stone-50);
+  }
+
+  .testimonials-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .testimonials .section-title { color: var(--stone-50); }
+  .testimonials .section-eyebrow {
+    color: var(--stone-200);
+    border-color: var(--stone-400);
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 80px;
+  }
+
+  .testimonial {
+    padding: 48px 40px;
+    border: 1px solid rgba(246, 244, 239, 0.15);
+    position: relative;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .testimonial:hover {
+    border-color: var(--accent);
+    background: rgba(184, 148, 74, 0.03);
+  }
+
+  .quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    line-height: 0.5;
+    color: var(--accent);
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    font-style: italic;
+  }
+
+  .testimonial .stars {
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.5;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 32px;
+    color: var(--stone-50);
+  }
+
+  .testimonial-author {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--stone-200);
+    font-weight: 500;
+  }
+  .testimonial-author span {
+    display: block;
+    font-size: 11px;
+    color: var(--stone-400);
+    margin-top: 4px;
+    letter-spacing: 0.1em;
+    text-transform: none;
+  }
+
+  /* ========== CTA ========== */
+  .cta {
+    padding: 160px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(184, 148, 74, 0.08), transparent 60%);
+    pointer-events: none;
+  }
+
+  .cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 6vw, 80px);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .cta h2 em {
+    font-style: italic;
+    color: var(--accent-deep);
+  }
+
+  .cta p {
+    font-size: 18px;
+    color: var(--stone-600);
+    max-width: 560px;
+    margin: 0 auto 48px;
+    font-weight: 300;
+    position: relative;
+  }
+
+  .cta-phone {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 24px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+    position: relative;
+    transition: color 0.3s;
+  }
+  .cta-phone:hover { color: var(--accent-deep); }
+
+  /* ========== FOOTER ========== */
+  footer {
+    padding: 60px 48px 40px;
+    background: var(--stone-100);
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  .footer-brand p {
+    font-size: 14px;
+    color: var(--stone-600);
+    margin-top: 16px;
+    max-width: 320px;
+    line-height: 1.7;
+  }
+
+  .footer-col h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ink);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .footer-col ul {
+    list-style: none;
+  }
+  .footer-col li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--stone-600);
+  }
+  .footer-col a {
+    color: var(--stone-600);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-col a:hover { color: var(--accent-deep); }
+
+  .footer-bottom {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--stone-400);
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 1024px) {
+    .hero { grid-template-columns: 1fr; gap: 60px; padding: 120px 32px 60px; }
+    .hero-image { height: 480px; }
+    .section-header { grid-template-columns: 1fr; gap: 32px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .story { grid-template-columns: 1fr; gap: 60px; }
+    .testimonial-grid { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: repeat(6, 1fr); }
+    .item-1 { grid-column: span 6; }
+    .item-2 { grid-column: span 6; }
+    .item-3, .item-4, .item-5 { grid-column: span 3; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 20px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 24px 60px; }
+    .hero-image { height: 360px; }
+    .hero-rating { left: 0; bottom: -20px; padding: 18px 24px; }
+    .services, .portfolio, .story, .testimonials, .cta { padding: 80px 24px; }
+    .portfolio-grid { grid-template-columns: 1fr; grid-auto-rows: 260px; }
+    .item-1, .item-2, .item-3, .item-4, .item-5 { grid-column: span 1; grid-row: span 1; }
+    .service { padding: 40px 28px; }
+    .testimonial { padding: 36px 28px; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 12px; }
+    .cta-phone { font-size: 28px; }
+  }
+
+  /* ========== REVEAL ========== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <div class="logo-mark"></div>
+    <span>Cornerstone</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:4164001147" class="nav-cta">Call Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Vaughan • Est. Family-Owned</div>
+    <h1>Stone, laid<br>with <em>intention.</em></h1>
+    <p class="lede">Cornerstone is a family-owned interlock and landscape design studio crafting driveways, patios, and backyards built to outlast trends — and the homes they sit beside.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Request a Consultation</a>
+      <a href="#work" class="btn-secondary">View Our Work</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="images/project-01.webp" alt="Premium interlock driveway and front porch by Cornerstone" />
+    <div class="hero-rating">
+      <div class="stars">★★★★★</div>
+      <div class="rating-text">4.5 on Google</div>
+      <div class="rating-sub">22 Reviews</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item">Interlock Driveways</span>
+    <span class="marquee-item">Flagstone Patios</span>
+    <span class="marquee-item">Custom Pergolas</span>
+    <span class="marquee-item">Front Entryways</span>
+    <span class="marquee-item">Backyard Design</span>
+    <span class="marquee-item">Retaining Walls</span>
+    <span class="marquee-item">Interlock Driveways</span>
+    <span class="marquee-item">Flagstone Patios</span>
+    <span class="marquee-item">Custom Pergolas</span>
+    <span class="marquee-item">Front Entryways</span>
+    <span class="marquee-item">Backyard Design</span>
+    <span class="marquee-item">Retaining Walls</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header reveal">
+    <div>
+      <span class="section-eyebrow">What We Do</span>
+    </div>
+    <h2 class="section-title">Craftsmanship, <em>from curb to garden.</em></h2>
+  </div>
+
+  <div class="services-grid">
+    <div class="service reveal">
+      <div class="service-number">— 01</div>
+      <h3>Interlock Driveways</h3>
+      <p>Premium stone driveways engineered to hold their line for decades. Properly graded, properly edged, properly set — so your investment doesn't sink the first winter.</p>
+    </div>
+    <div class="service reveal">
+      <div class="service-number">— 02</div>
+      <h3>Flagstone & Patios</h3>
+      <p>From black granite steps to natural flagstone entertaining spaces, we build patios that anchor your backyard and elevate how you live in it.</p>
+    </div>
+    <div class="service reveal">
+      <div class="service-number">— 03</div>
+      <h3>Landscape Design</h3>
+      <p>Justin and Marisa are hands-on designers. Every project begins with a plan — material choices, proportions, flow — built around your home, not a template.</p>
+    </div>
+    <div class="service reveal">
+      <div class="service-number">— 04</div>
+      <h3>Custom Structures</h3>
+      <p>Pergolas, retaining walls, pillars, and hardscape features built to the same standard as the stonework they complement. Details that make a space feel finished.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="work">
+  <div class="portfolio-inner">
+    <div class="section-header reveal">
+      <div>
+        <span class="section-eyebrow">Recent Work</span>
+      </div>
+      <h2 class="section-title">A portfolio built <em>one stone at a time.</em></h2>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item item-1 reveal">
+        <img src="images/project-01.webp" alt="Front entryway with granite steps and interlock walkway" />
+        <div class="portfolio-caption">
+          <div class="caption-label">Vaughan Residence</div>
+          <div class="caption-title">Granite Entryway</div>
+        </div>
+      </div>
+      <div class="portfolio-item item-2 reveal">
+        <img src="images/project-03.webp" alt="Curved interlock walkway with two-tone pattern" />
+        <div class="portfolio-caption">
+          <div class="caption-label">Private Home</div>
+          <div class="caption-title">Two-Tone Walkway</div>
+        </div>
+      </div>
+      <div class="portfolio-item item-3 reveal">
+        <img src="images/project-02.webp" alt="Flagstone porch with steps" />
+        <div class="portfolio-caption">
+          <div class="caption-label">Front Porch</div>
+          <div class="caption-title">Slate Flagstone</div>
+        </div>
+      </div>
+      <div class="portfolio-item item-4 reveal">
+        <img src="images/project-04.webp" alt="Interlock front landscaping with granite steps" />
+        <div class="portfolio-caption">
+          <div class="caption-label">Vaughan Build</div>
+          <div class="caption-title">Front Landscape</div>
+        </div>
+      </div>
+      <div class="portfolio-item item-5 reveal">
+        <img src="images/project-05.webp" alt="Custom cedar pergola over stone patio" />
+        <div class="portfolio-caption">
+          <div class="caption-label">Backyard Feature</div>
+          <div class="caption-title">Cedar Pergola</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="story-visual reveal">
+    <img src="images/project-05.webp" alt="Custom pergola over stone patio" />
+  </div>
+  <div class="story-content reveal">
+    <span class="section-eyebrow" style="margin-bottom: 24px; display: inline-block;">Our Story</span>
+    <h2>Two people. One standard. <em>No shortcuts.</em></h2>
+    <p>Cornerstone is run by Justin and Marisa — a family operation, not a call center. Every project we take on gets our eyes on it, our hands on it, and our name attached to it. That's the whole business model.</p>
+    <p>We've been laying stone in Vaughan long enough to know that good work shows up in the details no one photographs: the base prep under the pavers, the drainage behind the wall, the edge that sits flush five winters later. We build like we're going to drive past it for the next twenty years — because we are.</p>
+    <div class="signature">— Justin & Marisa</div>
+    <div class="signature-sub">Owners, Cornerstone Interlock & Landscape Design</div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <div class="section-header reveal">
+      <div>
+        <span class="section-eyebrow">Client Reviews</span>
+      </div>
+      <h2 class="section-title">Straight from the <em>homeowners.</em></h2>
+    </div>
+
+    <div class="testimonial-grid">
+      <div class="testimonial reveal">
+        <div class="quote-mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">The finished product was above and beyond our expectations. Quality work, great design, quick, and very accommodating to our needs.</p>
+        <div class="testimonial-author">Kevin C. <span>Google Review</span></div>
+      </div>
+      <div class="testimonial reveal">
+        <div class="quote-mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">Our second time using this company. They are professional and meticulous. Marisa and Justin are both experienced in design and build.</p>
+        <div class="testimonial-author">Sara C. <span>Google Review</span></div>
+      </div>
+      <div class="testimonial reveal">
+        <div class="quote-mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">They took the time to discuss the different stone options that would work best for us. Fair pricing and the quality of the work speaks for itself.</p>
+        <div class="testimonial-author">Max D. <span>Google Review</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2>Let's build something <em>that lasts.</em></h2>
+  <p>Consultations are free. If your driveway, patio, or front entry needs a serious answer, call Justin directly.</p>
+  <a href="tel:4164001147" class="cta-phone">(416) 400-1147</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span>Cornerstone</span>
+      </div>
+      <p>Family-owned interlock and landscape design, built by Justin and Marisa in Vaughan since day one.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li>Interlock Driveways</li>
+        <li>Flagstone Patios</li>
+        <li>Landscape Design</li>
+        <li>Custom Pergolas</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Service Area</h4>
+      <ul>
+        <li>Vaughan</li>
+        <li>Richmond Hill</li>
+        <li>Woodbridge</li>
+        <li>Maple</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:4164001147">(416) 400-1147</a></li>
+        <li>Vaughan, ON</li>
+        <li>Opens 9am</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Cornerstone Interlock & Landscape Design</span>
+    <span>Crafted in Vaughan</span>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
